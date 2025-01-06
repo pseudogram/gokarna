@@ -38,16 +38,16 @@
     <link rel="canonical" href="{{ .Permalink }}">
 
     {{ $cssNormalize := resources.Get "css/normalize.min.css" }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.RelPermalink }}" media="print">
+    <link rel="stylesheet" type="text/css" href="{{ $cssNormalize.Permalink }}" media="print">
 
     {{ $cssMain := resources.Get "css/main.css" | minify }}
-    <link rel="stylesheet" type="text/css" href="{{ $cssMain.RelPermalink }}">
+    <link rel="stylesheet" type="text/css" href="{{ $cssMain.Permalink }}">
 
     {{ $cssDark := resources.Get "css/dark.css" | minify }}
-    <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.RelPermalink }}">
+    <link id="dark-theme" rel="stylesheet" href="{{ $cssDark.Permalink }}">
 
     {{ $jsBundle := resources.Match "js/**.js" | resources.Concat "js/bundle.js" | minify | resources.Fingerprint "sha256" }}
-    <script src="{{ $jsBundle.RelPermalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
+    <script src="{{ $jsBundle.Permalink }}" integrity="{{ $jsBundle.Data.Integrity }}"></script>
 
     <!-- Option for user to inject custom html -->
     {{ if .Site.Params.CustomHeadHTML }}
