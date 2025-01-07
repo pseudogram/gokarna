@@ -81,6 +81,9 @@ pre {
 :not(pre) > code {
   background-color: var(--dark-tertiary-color) !important;
   color: var(--dark-text-color);
+  color: #c01443;
+  color: #EA3969;
+  color: #EE5D84;
 }
 
 .header-shadow {
