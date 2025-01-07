@@ -79,10 +79,9 @@ pre {
 }
 
 :not(pre) > code {
-  background-color: var(--dark-tertiary-color) !important;
-  color: var(--dark-text-color);
-  color: #c01443;
-  color: #EA3969;
+  /* background-color: var(--dark-tertiary-color) !important; */
+  background-color: #464646 !important;
+  /* color: var(--dark-text-color); */
   color: #EE5D84;
 }
 
